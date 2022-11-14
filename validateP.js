@@ -24,7 +24,7 @@ const validatePath = (path) => {
               //asigna status code al los links
               fetch(onlyLink)
                 .then(response => {
-                  response.status = '200' ? (console.log(response.status, onlyText ,'✓', onlyLink)) : (console.log(response.status, '400', onlyLink))
+                  response.status = '200' ? (console.log(response.status,'✓', onlyLink)) : (console.log(response.status, '❌', onlyLink))
                 })
                 .catch(err => {
                   console.log(err, '400', onlyLink);
