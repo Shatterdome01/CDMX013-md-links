@@ -1,5 +1,4 @@
 const { error } = require('console');
-const fs = require('fs')
 const fetch = require('node-fetch');
 
 
