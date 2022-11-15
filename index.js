@@ -8,10 +8,9 @@ const mdLinks = (path) => {
   let result = 'no exist';
   try {
       if (fs.existsSync(path)) {
-          result = 'exist';
+          result = statusLinks(extractLinks(path));
           //console.log(path);
-           statusLinks(extractLinks(path));
-         // console.log(statusLinks(aux));
+                    // console.log(statusLinks(aux));
       }
   } catch (err) {
       result = err;
@@ -19,4 +18,4 @@ const mdLinks = (path) => {
   return result;
 }
 
-console.log(mdLinks(process.argv[2]));
+mdLinks(process.argv[2]).then(console.log);
