@@ -1,4 +1,3 @@
-// const {validateP} = require('./validateP.js');
 const {statusLinks} =  require('./statusLinks.js');
 const {extractLinks} = require('./extractLinks.js');
 const fs = require('fs')
@@ -9,8 +8,6 @@ const mdLinks = (path) => {
   try {
       if (fs.existsSync(path)) {
           result = statusLinks(extractLinks(path));
-          //console.log(path);
-                    // console.log(statusLinks(aux));
       }
   } catch (err) {
       result = err;
